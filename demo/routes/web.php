@@ -20,8 +20,14 @@ Route::resources([
     'photos' => 'ContactController',
    
 ]);
-//Route::redirect('/contact', '/user', 301);
-Route::match(['get', 'post'], '/', function () {
-    
+
+Route::get('blade', function () {
+    return view('pages.layouts.child');
 });
-Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
+
+
+//Route::redirect('/contact', '/user', 301);
+#Route::match(['get', 'post'], '/', function () {
+    
+#});
+//Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
